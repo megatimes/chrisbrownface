@@ -18,7 +18,7 @@ function changeColor() {
     delay++;
     delay2++;
 
-    if (window.width >= 1024) {
+    if (window.innerWidth >= 1024) {
 
         if (delay > 8) {
             bodyElement.style.backgroundColor = getRandomColor();

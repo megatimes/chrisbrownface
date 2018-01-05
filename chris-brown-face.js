@@ -9,7 +9,10 @@ var chrisTopSmall = document.getElementById("chris-top-small");
 var chrisTopLarge = document.getElementById("chris-top-large");
 var delay = 0;
 var delay2 = 0;
-var requestAnimationFrame = window.requestAnimationFrame;
+var requestAnimationFrame = window.requestAnimationFrame || 
+                            window.mozRequestAnimationFrame || 
+                            window.webkitRequestAnimationFrame || 
+                            window.msRequestAnimationFrame;
  
 function changeColor() {
     delay++;

@@ -9,6 +9,7 @@ var chrisTopSmall = document.getElementById("chris-top-small");
 var chrisTopLarge = document.getElementById("chris-top-large");
 var delay = 0;
 var delay2 = 0;
+var delay3 = 0;
 var requestAnimationFrame = window.requestAnimationFrame || 
                             window.mozRequestAnimationFrame || 
                             window.webkitRequestAnimationFrame || 
@@ -17,6 +18,7 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 function changeColor() {
     delay++;
     delay2++;
+    delay3++;
      
     if (delay > 8) {
         bodyElement.style.backgroundColor = getRandomColor();
@@ -25,21 +27,34 @@ function changeColor() {
     }
 
     if (delay <= 6) {
-        chrisTopLarge.style.bottom = '-22%';
-        chrisTopSmall.style.bottom = '-5%';
+        chrisTopLarge.style.bottom = '-32vh';
+        chrisTopSmall.style.bottom = '-5vh';
     } else {
-        chrisTopLarge.style.bottom = '-25%';
-        chrisTopSmall.style.bottom = '-8%';
+        chrisTopLarge.style.bottom = '-35vh';
+        chrisTopSmall.style.bottom = '-8vh';
     }
 
     // move head from side to side
     if (delay2 <= 40) {
-        chrisTopSmall.style.right = '0%';
+        chrisTopLarge.style.right = '-20vw';
+        chrisTopSmall.style.right = '0vw';
     } else if (delay2 < 80) {
-        chrisTopSmall.style.right = '-12%';
+        chrisTopLarge.style.right = '0vw';        
+        chrisTopSmall.style.right = '-14vw';
     } else {
         delay2 = 0;
     }
+
+
+    // rotate
+    if (delay3 >= 300) {
+        //bodyElement.style.transform = 'rotateY(180deg)';
+    } else if (delay2 <= 600) {
+        //bodyElement.style.transform = 'rotateY(-180deg)';
+    } else {
+        delay3 = 0;
+    }
+
 
     requestAnimationFrame(changeColor);
 }              

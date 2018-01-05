@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1, user-scalable=no" />
         <meta name="robots" content="noindex, nofollow" />
         <title>Chris Brown Face</title>
         <style type="text/css">
             html {
-                font-size: 16px;
+                font-size: 24px;
+                overflow: hidden;
             }
-            @media(min-width: 768px)  { html { font-size: 28px; } }            
-            @media(min-width: 1024px) { html { font-size: 32px; } }            
+            @media(min-width: 768px)  { html { font-size: 36px; } }            
+            @media(min-width: 1024px) { html { font-size: 42px; } }            
 
             body {
                 margin: 0;
@@ -21,8 +22,8 @@
                 margin-top: -31px;
                 position: absolute;
                 display: block;
-                width: 110%;
-                height: 120%;
+                width: 110vw;
+                height: 120vh;
                 overflow: hidden;
             }
             .chris {
@@ -31,8 +32,12 @@
                 position: absolute;
                 background-repeat: repeat;
                 background-image: url('chrisbrown.png');
-
             }
+            @media(max-width: 420px)  {                 
+                .chris {
+                    background-image: url('chrisbrown-small.png');
+                }           
+            }            
             .chris1 {
                 top: -5px;
                 left: -3px;
@@ -57,20 +62,7 @@
                 opacity: .4;
                 z-index: 10;
                 transform: rotate(5deg);
-            }
-            .test-text {
-                position: absolute;
-                display: inline-block;
-                bottom: -10%;
-                left: 7%;
-                font-size: 2.5rem;
-                color: white;
-                font-weight: bold;
-                font-family: "Comic Sans MS", cursive, sans-serif;
-                text-shadow: .2rem .2rem .6rem #05ab05;
-                z-index: 101;
-                transform: rotate(-30deg);
-            }                                      
+            }                               
             .chris-top {
                 background-image: url('chrisbrown.png');
                 background-repeat: repeat;
@@ -80,15 +72,27 @@
                 z-index: 100;   
                 opacity: .87;             
             }
-            
+            .test-text {
+                position: absolute;
+                display: inline-block;
+                bottom: 5vh;
+                left: 7vw;
+                font-size: 3rem;
+                color: white;
+                font-weight: bold;
+                font-family: "Comic Sans MS", cursive, sans-serif;
+                text-shadow: .2rem .2rem .6rem #05ab05;
+                z-index: 101;
+                transform: rotate(-30deg);
+            }                   
             @media(max-width: 420px)  {                 
                 .chris-top-large {
                     opacity: 0;
                 }
                 .chris-top-small {
                     background-repeat: no-repeat;
-                    bottom: -10%;
-                    right: 0;
+                    bottom: 10vh;
+                    right: 0vw;
                     width: 70%;
                     height: 70%;
                 }              
@@ -100,7 +104,12 @@
                 .test-text {
                     font-size: 3.5rem;
                 }
-            }               
+            }   
+            @media(min-width: 768px)  {
+                .test-text {
+                    font-size: 3.5rem;
+                }
+            }                         
         </style>
     </head>
     <body>

@@ -10,15 +10,18 @@ var chrisTopLarge = document.getElementById("chris-top-large");
 var delay = 0;
 var delay2 = 0;
 var delay3 = 0;
-var requestAnimationFrame = window.requestAnimationFrame || 
-                            window.mozRequestAnimationFrame || 
-                            window.webkitRequestAnimationFrame || 
-                            window.msRequestAnimationFrame;
+var requestAnimationFrame = window.requestAnimationFrame;
  
 function changeColor() {
-    delay++;
-    delay2++;
-    delay3++;
+    if (window.width >= 1024) {
+        delay++;
+        delay2++;
+        delay3++;
+    } else {
+        delay++; delay++;
+        delay2++; delay2++;
+        delay3++; delay3++;
+    }
      
     if (delay > 8) {
         bodyElement.style.backgroundColor = getRandomColor();

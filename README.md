@@ -1,2 +1,2 @@
 # chrisbrown
-crazy chris brown face
+Let's make Chris Brown's face do bizarre things. (Different Chris Brown)

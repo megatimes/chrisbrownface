@@ -2,8 +2,9 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1, user-scalable=no" />
-        <meta name="robots" content="noindex, nofollow" />
-        <title>Chris Brown Face</title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="description" content="An experiment in unusual, unpleasant, and unforgivable colors and animations.     @megatimes">
+        <title>Chris Brown Face | An experiment of weird colors and animations</title>
         <style type="text/css">
             html {
                 font-size: 24px;
@@ -31,40 +32,40 @@
                 height: 100%;
                 position: absolute;
                 background-repeat: repeat;
-                background-image: url('chrisbrown.png');
+                background-image: url('./images/chris-brown.png');
             }
             @media(max-width: 420px)  {                 
                 .chris {
-                    background-image: url('chrisbrown-small.png');
+                    background-image: url('./images/chris-brown-small.png');
                 }           
             }            
-            .chris1 {
+            .chris--1 {
                 top: -5px;
                 left: -3px;
                 opacity: .9;  
                 z-index: 4;              
             }
-            .chris2 {
+            .chris--2 {
                 top: 10px;
                 left: 10px;
                 opacity: .8;
                 z-index: 6;
             }
-            .chris3 {
+            .chris--3 {
                 top: 20px;
                 left: 30px;
                 opacity: .6;
                 z-index: 8;
             }
-            .chris4 {
+            .chris--4 {
                 top: 40px;
                 left: 50px;
                 opacity: .4;
                 z-index: 10;
                 transform: rotate(5deg);
             }                               
-            .chris-top {
-                background-image: url('chrisbrown.png');
+            .chris__top {
+                background-image: url('./images/chris-brown.png');           
                 background-repeat: repeat;
                 background-size: cover;
                 bottom: -22%;
@@ -84,12 +85,20 @@
                 text-shadow: .2rem .2rem .6rem #05ab05;
                 z-index: 101;
                 transform: rotate(-30deg);
-            }                   
+            }  
+            .chris__top--large,
+            .chris__top--small {
+                background-repeat: no-repeat;
+                bottom: 10vh;
+                right: 0vw;
+                width: 70%;
+                height: 70%;
+            }                               
             @media(max-width: 420px)  {                 
-                .chris-top-large {
+                .chris__top--large {
                     opacity: 0;
                 }
-                .chris-top-small {
+                .chris__top--small {
                     background-repeat: no-repeat;
                     bottom: 10vh;
                     right: 0vw;
@@ -98,7 +107,7 @@
                 }              
             }
             @media(min-width: 421px)  {
-                .chris-top-small {
+                .chris__top--small {
                     opacity: 0;
                 }
                 .test-text {
@@ -109,20 +118,54 @@
                 .test-text {
                     font-size: 3.5rem;
                 }
+            }            
+            @media(min-width: 1200px)  {
+                .chris__top--small {
+                    bottom: 10vh;
+                    right: -10vw;
+                    width: 50%;
+                    height: 50%;
+                    opacity: .87;                    
+                }   
+                .chris__top--large {
+                    opacity: 0;
+                }                               
+            }
+            marquee {
+                margin-top: 10%;
+                z-index: 7;
+            }             
+            marquee img {
+                height: 5em;
+                width: auto;
+                transform: scaleX(-1) skewX(25deg);
+                border-radius: 100%;                
+                transform: scaleX(-1) skewX(25deg);
+                border: .3em solid #e81da0;
+                background: #20f3b3;
+                box-shadow: -20px -6px 1px #670649;
             }                         
         </style>
     </head>
+
     <body>
         <main>
-            <marquee behavior="" direction="ltr">test</marquee>
-            <div class="chris chris1"></div>
-            <div class="chris chris2"></div>
-            <div class="chris chris3"></div>
-            <div class="chris chris4"></div>
-            <div class="chris chris-top chris-top-small" id="chris-top-small"></div>
-            <div class="chris chris-top chris-top-large" id="chris-top-large"></div>
+            <div class="chris chris--1"></div>
+            <div class="chris chris--2"></div>
+            <div class="chris chris--3"></div>
+            <div class="chris chris--4"></div>
+            <div class="chris chris__top chris__top--small" id="chris-top-small"></div>
+            <div class="chris chris__top chris__top--large" id="chris-top-large"></div>
         </main>
+
+        <marquee behavior="" direction="ltr">
+            <img src="./images/chris-brown.png" alt="a marquee"/>
+        </marquee>
         <span class="test-text">test</span>
+
+
+        <script src="./chris-brown-face.js"></script>
+
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -131,8 +174,6 @@
           ga('create', 'UA-84127870-1', 'auto');
           ga('send', 'pageview');
         </script>        
-
-        <script src="chris-brown-face.js"></script>
     </body>
 </html>
 

@@ -7,7 +7,7 @@ var bodyElement = document.querySelector("body");
 var testText = document.querySelector(".test-text");
 var chrisTopSmall = document.getElementById("chris-top-small");
 var chrisTopLarge = document.getElementById("chris-top-large");
-var delay = 0;
+var delay  = 0;
 var delay2 = 0;
 var requestAnimationFrame = window.requestAnimationFrame || 
                             window.mozRequestAnimationFrame || 
@@ -18,8 +18,35 @@ function changeColor() {
     delay++;
     delay2++;
 
-    if (window.innerWidth >= 1024) {
-
+    if (window.innerWidth >= 1200) { 
+        // larger screens
+            if (delay > 8) {
+                bodyElement.style.backgroundColor = getRandomColor();
+                testText.style.color = getRandomColor();
+                delay = 0;
+            }
+    
+            if (delay <= 6) {
+                //chrisTopLarge.style.bottom = '-32vh';
+                chrisTopSmall.style.bottom = '9vh';
+            } else {
+                //chrisTopLarge.style.bottom = '-35vh';
+                chrisTopSmall.style.bottom = '8vh';
+            }
+    
+            // move head from side to side
+            if (delay2 <= 40) {
+                chrisTopLarge.style.right = '20vw';
+                chrisTopSmall.style.right = '20vw';
+            } else if (delay2 < 80) {
+                chrisTopLarge.style.right = '-10vw';        
+                chrisTopSmall.style.right = '-10vw';
+            } else {
+                delay2 = 0;
+            }
+        } 
+    else if (window.innerWidth >= 1024) {
+    // not big screens but not small screens
         if (delay > 8) {
             bodyElement.style.backgroundColor = getRandomColor();
             testText.style.color = getRandomColor();
@@ -27,20 +54,20 @@ function changeColor() {
         }
 
         if (delay <= 6) {
-            chrisTopLarge.style.bottom = '-32vh';
-            chrisTopSmall.style.bottom = '-5vh';
+            chrisTopLarge.style.bottom = '8vh';
+            chrisTopSmall.style.bottom = '8vh';
         } else {
-            chrisTopLarge.style.bottom = '-35vh';
-            chrisTopSmall.style.bottom = '-8vh';
+            chrisTopLarge.style.bottom = '9vh';
+            chrisTopSmall.style.bottom = '9vh';
         }
 
         // move head from side to side
         if (delay2 <= 40) {
-            chrisTopLarge.style.right = '-20vw';
+            chrisTopLarge.style.right = '0vw';
             chrisTopSmall.style.right = '0vw';
         } else if (delay2 < 80) {
-            chrisTopLarge.style.right = '0vw';        
-            chrisTopSmall.style.right = '-14vw';
+            chrisTopLarge.style.right = '8vw';        
+            chrisTopSmall.style.right = '8vw';
         } else {
             delay2 = 0;
         }
@@ -105,7 +132,6 @@ function getRandomColor() {
     var hexColor = "#" + hexR + hexG + hexB;
     return hexColor.toUpperCase();
 }
-
 
 
 changeColor();
